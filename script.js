@@ -1,12 +1,15 @@
-const signInbtnlink= document.querySelector('.signInbtnlink');
-const signupbtnlink= document.querySelector('.signupbtnlink');
+const signInbtnlink = document.querySelector('.signInbtnlink');
+const signupbtnlink = document.querySelector('.signupbtnlink');
 const wrapper = document.querySelector('.wrapper');
 
-signupbtnlink.addEventListener('click',() => {
-    wrapper.classList.toggle('active');
+signupbtnlink.addEventListener('click', (e) => {
+  e.preventDefault();
+  wrapper.classList.add('active');
 });
-signInbtnlink.addEventListener('click',() => {
-    wrapper.classList.toggle('active');
 
+signInbtnlink.addEventListener('click', (e) => {
+  e.preventDefault();
+  wrapper.classList.remove('active');
 });
-console.log("shailesh yadav");
+
+console.log("Shailesh Yadav");

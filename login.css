@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
     
 }
 body{
@@ -9,20 +10,21 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: black;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 .wrapper{
-    position: relative;
-    width: 400px;
-    height: 500px;
-    background: black;
-    border-radius: 20px;
-    padding: 50px;
-    box-shadow: 0 0 50px #0ef;
-    overflow: hidden;
+     position: relative;
+  width: 400px;
+  height: 520px;
+  background: #0b0b0b;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 0 30px #0ef;
+  overflow: hidden;
+  transition: filter 1s;
 }
 .wrapper:hover{
-    animation: animate 1s linear infinite;
+    animation: animate 7s linear infinite;
 }
 @keyframes animate{
     100%{
@@ -30,94 +32,108 @@ body{
 }
 .form-wrapper{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    transition: 1s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
 }
 .wrapper.active .form-wrapper.sign-in{
-transform: translateY(-450px);
+transform: translateY(-100%);
 }
 .wrapper .form-wrapper.sign-up{
-    position: absolute;
-    top: 450px;
-    left: 0;
+     position: absolute;
+  top: 100%;
+  left: 0;
 }
 .wrapper.active .form-wrapper.sign-up{
-    transform: translateY(-450px);
+    transform: translateY(-100%);
 }
 h1{
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
     color: white;
+    margin-bottom: 20px;
 }
 .input-group{
-    border-bottom: 2px solid #fff;
-    position: relative;
-    margin: 30px 0 ;
+    margin: 20px 0;
+  border-bottom: 2px solid #0ef;
+  position: relative;
 }
 .input-group label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
+   position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s ease;
 }
 .input-group input{
-    width: 320px;
-    height: 40px;
-    font-size: 16px;
-    padding: 0 5px;
-    color: #fff;
-    background: transparent;
-    outline: none;
-    border: none;
+    width: 100%;
+  height: 45px;
+  font-size: 16px;
+  padding: 0 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
 }
 .input-group input:focus~label,
 .input-group input:valid~label{
-top: -5px;
+ top: -10px;
+  color: #0ef;
+  font-size: 14px;
 }
 .remember{
-    margin: -5px 0 15px 5px;
+    display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #ccc;
+  font-size: 14px;
+  width: 100%;
 }
-.remember label{
+/* .remember label{
     font-size: 14px;
     color: #fff;
-}
+} */
 .remember  input{
-    accent-color: #0ef
+    accent-color: #0ef;
+  margin-right : 8px;
 }
-button{
-    position: relative;
-    width: 100%;
-    height: 40px;
-    background: #0ef;
-    box-shadow: 0 0 10px #0ef;
-    font-size: 16px;
-    color: black;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 30px;
+
+button {
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  background: #0ef;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-.signuplink{
-    font-size: 15px;
-    text-align: center;
-    margin: 15px 0;
+
+button:hover {
+  box-shadow: 0 0 20px #0ef;
 }
-.signuplink p{
-    color: #fff;
+
+.signuplink {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+  color: #ccc;
 }
-.signuplink a{
-    color: #0ef;
-    font-weight: 500;
-    text-decoration: none;
+
+.signuplink a {
+  color: #0ef;
+  text-decoration: none;
+  font-weight: bold;
 }
-.signuplink p a:hover{
-    text-decoration: underline;
+
+.signuplink a:hover {
+  text-decoration: underline;
 }
